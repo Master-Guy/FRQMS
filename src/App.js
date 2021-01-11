@@ -2,9 +2,17 @@ import "./App.css"
 
 import React from "react"
 import { hot } from "react-hot-loader/root"
+import {
+    AppRegistry, StyleSheet, Text, View,
+} from "react-native"
+import {
+    Link, NativeRouter, Route,
+} from "react-router-native"
 
 import { ReactComponent as BrandSvg } from "./brand.svg"
 import ClientForm from "./ClientForm.js"
+
+const NonActive = () => <Text>Please fill in the rescue form on the right</Text>
 
 function app() {
     return (
@@ -14,7 +22,7 @@ function app() {
                     <BrandSvg />
                 </div>
                 <div className='menuContent' id='menuContent'>
-                    Please fill in the rescue form on the right
+                    <NonActive />
                 </div>
             </div>
             <div className='mainContent'>

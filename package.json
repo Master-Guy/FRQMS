@@ -54,7 +54,10 @@
     "react-dev-utils": "^11.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0",
+    "react-native": "^0.63.4",
+    "react-native-web": "^0.14.10",
     "react-refresh": "^0.8.3",
+    "react-router-native": "^5.2.0",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "8.0.2",
@@ -92,12 +95,8 @@
       "last 1 safari version"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
+    "@babel/plugin-syntax-class-properties": "^7.12.1",
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-simple-import-sort": "^7.0.0"

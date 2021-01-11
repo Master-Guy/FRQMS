@@ -30,6 +30,11 @@
         "react",
         "simple-import-sort"
     ],
+    "ignorePatterns": [
+        "build/*",
+        "config/*",
+        "/*"
+    ],
     "rules": {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
