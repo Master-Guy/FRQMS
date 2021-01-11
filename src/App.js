@@ -3,24 +3,25 @@ import "./App.css"
 import React from "react"
 import { hot } from "react-hot-loader/root"
 
-import logo from "./logo.svg"
+import { ReactComponent as BrandSvg } from "./brand.svg"
+import ClientForm from "./ClientForm.js"
 
 function app() {
     return (
-        <div className='App'>
-            <header className='App-header'>
-                <img src={logo} className='App-logo' alt='logo' />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className='App-link'
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    Learn React
-                </a>
-            </header>
+        <div className='root'>
+            <div className='menu'>
+                <div className='menuLogo'>
+                    <BrandSvg />
+                </div>
+                <div className='menuContent' id='menuContent'>
+                    Please fill in the rescue form on the right
+                </div>
+            </div>
+            <div className='mainContent'>
+                <div>
+                    <ClientForm />
+                </div>
+            </div>
         </div>
     )
 }
