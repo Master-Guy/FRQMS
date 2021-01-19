@@ -4,13 +4,15 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
     "@svgr/webpack": "5.4.0",
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.0",
     "babel-loader": "8.1.0",
@@ -22,7 +24,6 @@
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
@@ -55,9 +56,11 @@
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0",
     "react-native": "^0.63.4",
+    "react-native-elements": "^3.1.0",
     "react-native-web": "^0.14.10",
     "react-refresh": "^0.8.3",
-    "react-router-native": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-switch": "^6.0.0",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "8.0.2",
@@ -97,9 +100,11 @@
   },
   "devDependencies": {
     "@babel/plugin-syntax-class-properties": "^7.12.1",
-    "eslint": "^7.17.0",
+    "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0"
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "react-native-wss": "^1.0.12",
+    "yauzl": "^2.10.0"
   },
   "jest": {
     "roots": [

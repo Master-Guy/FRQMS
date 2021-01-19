@@ -44,3 +44,20 @@ html, head, body, #root {
     padding-top: 100px;
     padding-left: 100px;
 }
+
+.needFuelYes {
+    width: 200px;
+    height: 20px;
+    color: blue;
+}
+
+.needFuelNo {
+    width: 200px;
+    height: 20px;
+    color: red;
+}
+
+.clientformRoot {
+    width: 30rem;
+    border: 1px solid white;
+}
