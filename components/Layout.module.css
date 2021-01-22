@@ -1,19 +1,58 @@
-.root {
+#__next,
+.root,
+.html,
+.body {
     height: 100%;
     width: 100%;
-    background-color: #505050;
+    background-color: #111213;
     display: flex;
+    margin: 0px;
+    padding: 0px;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
     align-self: stretch;
+    color: #aaabac
+}
+
+.button {
+    box-shadow: inset 0px 1px 0px 0px #aaabac;
+	background-color: transparent;
+	border-radius: 11px;
+	border: 2px solid #aaabac;
+	display: inline-block;
+	cursor: pointer;
+	color: #aaabac;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration:  none;
+	text-shadow: 1px 1px 5px #aaabac;
+	margin: 3px;
+}
+
+.button:hover {
+	background-color: transparent;
+}
+
+.button:active {
+	position: relative;
+	top: 2px;
+}
+
+.button:focus {
+	outline: 0;
+}
+
+.testDiv {
+    display: block;
 }
 
 .menu {
     margin: 0px;
     padding: 0px;
     border-right: .5rem solid #d65050;
-    width: 180px;
+    width: 210px;
     height: 100%;
     order: 1;
     flex: 0 1 auto;
@@ -26,6 +65,10 @@
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.menuContent {
+    margin: 20px;
 }
 
 .mainContent {

@@ -552,7 +552,11 @@
     },
     "overrides": [
         {
-            "files": "server/**/*.js",
+            "files": [
+                "pages/*.js",
+                "components/*.js",
+                "public/*.js"
+            ],
             "env": {
                 "node": true
             },

@@ -1,5 +1,6 @@
-import axios from 'axios'
+import useSWR from 'swr'
 import React from 'react'
+import Props from '../pages/[props]'
 
 function QueueClient(props) {
     return (
@@ -14,8 +15,6 @@ function QueueClient(props) {
 }
 
 function QueueItem(props) {
-    console.log('qi')
-    console.log(props.qi)
     return (
         <ul>
             <li><b>UUID: </b>{props.qi.uuid}</li>
@@ -26,25 +25,20 @@ function QueueItem(props) {
     )
 }
 
-export default class NewRequest extends React.Component {
-    state = {
-        queueItems: [],
-    }
-
-    componentDidMount() {
-        axios.get("https://qms.localecho.net/api/v1/queue/")
-            .then(res => {
-                const results = res.data;
-                this.setState({ queueItems: results });
-            })
-    }
-
-    render() {
-        console.log(this.state.queueItems)
-        return (
-            <div>
-                {this.state.queueItems.map(qi => <QueueItem qi={qi} />)}
-            </div>
-        )
-    }
+function QueueData(props) {
+    const { data, error } = useSWR(props.apiURL, fetcher)
+    if (error) return <div>failed to load</div>
+    if (!data) return <div>loading...</div>
+    return Object.keys(data).map(idx => <QueueItem key={data[idx].uuid} qi={data[idx]} />)
 }
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+function CreateRequest(props) {
+    return (
+        <div>
+            <QueueData apiURL={props.apiURL} />
+        </div>
+    )
+}
+
+export default CreateRequest

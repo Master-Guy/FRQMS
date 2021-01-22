@@ -1,5 +1,22 @@
+.t1 {
+    font-size: xx-large;
+    font-weight: normal;
+}
+
+.t2 {
+    font-size: x-large;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
 .btnYes {
-    color: #aa8888;
-    border-radius: 10;
-    border-color: red;
+    color: rgb(226, 0, 0);
+    border-color: rgb(226, 0, 0);
+    width: 10rem;
+}
+
+.btnNo {
+    color: rgb(92, 253, 92);
+    border-color: rgb(92, 253, 92);
+    width: 10rem;
 }

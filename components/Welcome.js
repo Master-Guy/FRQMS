@@ -1,10 +1,6 @@
 import styles from "./Welcome.module.css"
 import { React } from "react"
-import { Button } from 'react-native';
-
-import {
-    Link,
-} from "react-router-dom"
+import Router from "next/router";
 
 function Welcome() {
     return (
@@ -12,21 +8,31 @@ function Welcome() {
             <table>
                 <tbody>
                     <tr>
-                        <td><t1>Welcome to the Fuelrats</t1></td>
+                        <td className={styles.t1}>Welcome to the Fuelrats</td>
                     </tr>
                     <tr>
-                        <td><t2>Do you need fuel?</t2></td>
+                        <td className={styles.t2}>Do you need fuel?</td>
                     </tr>
                     <tr>
-                        <td><b><Link to="/client"><Button type='outline' className='btnYes' accessibilityLabel='Yes, I need fuel' title='Yes' /></Link></b></td>
-                    </tr>
-                    <tr>
-                        <td><b>No</b></td>
+                        <td>
+                            <button className={styles.defaultButton, styles.btnYes} onClick={btnYesClick}>Yes</button>
+                            <button className={styles.defaultButton, styles.btnNo} onClick={btnNoClick}>No</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </form>
     )
+}
+
+function btnYesClick(event) {
+    event.preventDefault()
+    Router.push('/newclient')
+}
+
+function btnNoClick(event) {
+    event.preventDefault()
+    Router.push('https://kiwi.fuelrats.com/')
 }
 
 export default Welcome

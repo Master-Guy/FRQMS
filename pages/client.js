@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
-import Welcome from '../components/Welcome'
+import CreateRequest from '../components/CreateRequest'
 
 export async function getStaticProps() {
     const apiURL = '' + process.env.API_URL + 'queue/'
@@ -15,7 +15,7 @@ export async function getStaticProps() {
 function QMS(props) {
     const router = useRouter()
     return (
-        <Layout route={router.query} subComponents={[<Welcome key="c1" />]} />
+        <Layout route={router.query} subComponents={[<CreateRequest key="c1" apiURL={props.apiURL} />]} />
     )
 }
 
