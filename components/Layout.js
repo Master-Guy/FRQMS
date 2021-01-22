@@ -1,4 +1,3 @@
-import projectstyles from './_project.module.css'
 import styles from './Layout.module.css'
 
 import React from 'react'

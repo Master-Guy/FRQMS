@@ -4,10 +4,10 @@ import CreateRequest from '../components/CreateRequest'
 
 export async function getStaticProps() {
     const apiURL = '' + process.env.API_URL + 'queue/'
-    console.log('apiURL: ' + apiURL)
+    let queueData = await (await fetch(apiURL)).json()
     return {
         props: {
-            apiURL,
+            queueData,
         },
     }
 }
@@ -15,7 +15,7 @@ export async function getStaticProps() {
 function QMS(props) {
     const router = useRouter()
     return (
-        <Layout route={router.query} subComponents={[<CreateRequest key="c1" apiURL={props.apiURL} />]} />
+        <Layout route={router.query} subComponents={[<CreateRequest key="c1" queueData={props.queueData} />]} />
     )
 }
 

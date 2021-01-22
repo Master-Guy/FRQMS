@@ -27,7 +27,7 @@ function Welcome() {
 
 function btnYesClick(event) {
     event.preventDefault()
-    Router.push('/newclient')
+    Router.push('/client')
 }
 
 function btnNoClick(event) {
