@@ -1,0 +1,12 @@
+.activeCase {
+    text-align: left;
+}
+
+.HiddenLink,
+.HiddenLink:hover,
+.HiddenLink:active,
+.HiddenLink:focus {
+    color: #aaabac;
+    text-decoration: none;
+	outline: 0;
+}

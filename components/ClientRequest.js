@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 function QueueClient(props) {
     if (props.client) {
@@ -30,7 +31,6 @@ function QueueItem(props) {
 }
 
 function ShowQueueData(props) {
-    console.log(props)
     if (props.queueData && typeof (props.queueData) == 'object') {
         return Object.keys(props.queueData).map(idx => <QueueItem key={props.queueData[idx].uuid} qi={props.queueData[idx]} />)
     }
@@ -39,6 +39,25 @@ function ShowQueueData(props) {
 
 function CreateRequest(props) {
     let queueData = props.queueData
+    // Get the clients own case details
+    if (process.browser) {
+        let myCase = JSON.parse(localStorage.getItem('case'))
+        console.log(myCase)
+        if (!myCase) {
+            console.log('Creating new UUID')
+            myCase = {
+                'uuid': uuidv4()
+            }
+            localStorage.setItem('case', JSON.stringify(myCase))
+        }
+        console.log(queueData)
+        let myQueuedCase = queueData.filter(rescue => rescue.uuid == myCase.uuid)
+        if (myQueuedCase[0]) {
+            myCase = myQueuedCase[0]
+            localStorage.setItem('case', JSON.stringify(myCase))
+        }
+        console.log(myCase)
+    }
     return (
         <div>
             <ShowQueueData key="queueData" queueData={queueData} />

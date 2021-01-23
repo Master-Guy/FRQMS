@@ -1,16 +1,5 @@
 import styles from "./ClientForm.module.css"
-
 import React from "react"
-
-function CallAPI() {
-    let _ws
-    _ws = new WebSocket('wss://dev.api.fuelrats.com', [], {
-        headers: { Authorization: 'Bearer 123' },
-        ca: '-----BEGIN CERTIFICATE-----\n\n-----END CERTIFICATE-----\n',
-        pfx: 'base64==',
-        passphrase: 'mustbedefinedforpfx'
-    });
-}
 
 function ClientForm() {
     // CallAPI()

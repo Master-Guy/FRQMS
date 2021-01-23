@@ -30,7 +30,7 @@ function Layout(props) {
                     <BrandSvg />
                 </div>
                 <div className={styles.menuContent} id='menuContent'>
-                    <MenuContent uuid={props.route.uuid} />
+                    <MenuContent />
                 </div>
             </div>
             <div className={styles.mainContent} id='mainContent'>
