@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/Master-Guy/frqms#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
     "@svgr/webpack": "^5.5.0",
     "axios": "^0.21.1",
     "next": "^10.0.5",
